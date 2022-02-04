@@ -3,6 +3,11 @@ const sequelize = require('../config/connection.js');
 
 class Location extends Model {}
 Location.init({
+    id: {
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
+        primaryKey:true
+    },
     location_name: {
         type: DataTypes.STRING,
         allowNull: false

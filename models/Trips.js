@@ -11,17 +11,13 @@ Trip.init({
     },
     traveller_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        unique: false,
-        references: {
-        }
+        references: 'Traveller',
+        referencesKey: 'id'
     },
     location_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        unique: false,
-        references: {
-        }
+        references: 'Location',
+        referencesKey: 'id'
     },
 }, {
     sequelize,
